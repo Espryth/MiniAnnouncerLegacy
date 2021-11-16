@@ -1,4 +1,4 @@
-package me.jonakls.minimessagelegacy.utils;
+package me.jonakls.miniannouncerlegacy.utils;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;

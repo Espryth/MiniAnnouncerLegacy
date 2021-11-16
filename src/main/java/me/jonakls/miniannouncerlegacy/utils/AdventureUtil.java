@@ -1,6 +1,6 @@
-package me.jonakls.minimessagelegacy.utils;
+package me.jonakls.miniannouncerlegacy.utils;
 
-import me.jonakls.minimessagelegacy.MiniMessageLegacy;
+import me.jonakls.miniannouncerlegacy.MiniAnnouncerLegacy;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.title.Title;
@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class AdventureUtil {
 
-    private static BukkitAudiences adventure = MiniMessageLegacy.getInstance().getAdventure();
+    private static BukkitAudiences adventure = MiniAnnouncerLegacy.getInstance().getAdventure();
 
     public static void showTitle(Player player, String... title) {
         adventure.player(player).showTitle(

@@ -1,7 +1,7 @@
-package me.jonakls.minimessagelegacy.managers;
+package me.jonakls.miniannouncerlegacy.managers;
 
-import me.jonakls.minimessagelegacy.utils.AdventureUtil;
-import me.jonakls.minimessagelegacy.utils.ChatUtil;
+import me.jonakls.miniannouncerlegacy.utils.AdventureUtil;
+import me.jonakls.miniannouncerlegacy.utils.ChatUtil;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;

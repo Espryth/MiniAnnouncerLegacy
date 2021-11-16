@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.jonakls</groupId>
-    <artifactId>MiniMessageLegacy</artifactId>
+    <artifactId>MiniAnnouncerLegacy</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>MiniMessageLegacy</name>
+    <name>MiniAnnouncerLegacy</name>
 
     <description>Simple automatic announcer with MiniMessage!</description>
     <properties>

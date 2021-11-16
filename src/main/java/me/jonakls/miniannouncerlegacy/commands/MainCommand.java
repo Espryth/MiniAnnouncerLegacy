@@ -1,8 +1,8 @@
-package me.jonakls.minimessagelegacy.commands;
+package me.jonakls.miniannouncerlegacy.commands;
 
-import me.jonakls.minimessagelegacy.MiniMessageLegacy;
-import me.jonakls.minimessagelegacy.configuration.Configuration;
-import me.jonakls.minimessagelegacy.utils.ChatUtil;
+import me.jonakls.miniannouncerlegacy.MiniAnnouncerLegacy;
+import me.jonakls.miniannouncerlegacy.configuration.Configuration;
+import me.jonakls.miniannouncerlegacy.utils.ChatUtil;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -32,35 +32,35 @@ public class MainCommand implements CommandExecutor {
             case "enable":
                 config.set("announcer.enabled", true);
                 config.reloadFile();
-                MiniMessageLegacy.getInstance().getAnnouncerManager().initTask();
+                MiniAnnouncerLegacy.getInstance().getAnnouncerManager().initTask();
                 sender.sendMessage(ChatUtil.toLegacyColors("&aStart all announcements"));
                 break;
             case "disable":
                 config.set("announcer.enabled", false);
                 config.reloadFile();
-                MiniMessageLegacy.getInstance().getAnnouncerManager().stopTask();
+                MiniAnnouncerLegacy.getInstance().getAnnouncerManager().stopTask();
                 sender.sendMessage(ChatUtil.toLegacyColors("&aStop all announcements"));
                 break;
             case "reload":
-                MiniMessageLegacy.getInstance().getAnnouncerManager().stopTask();
+                MiniAnnouncerLegacy.getInstance().getAnnouncerManager().stopTask();
                 config.reloadFile();
                 sender.sendMessage(ChatUtil.toLegacyColors("&aPlugin has been reloaded"));
-                MiniMessageLegacy.getInstance().getAnnouncerManager().initTask();
+                MiniAnnouncerLegacy.getInstance().getAnnouncerManager().initTask();
                 break;
             case "info":
                 ChatUtil.toArraySender(
                         sender,
-                        "&6MiniAnnouncer &8- &cv" + MiniMessageLegacy.getInstance().getDescription().getVersion(),
+                        "&6MiniAnnouncer &8- &cv" + MiniAnnouncerLegacy.getInstance().getDescription().getVersion(),
                         "&r",
-                        "&eMade by: &c" + MiniMessageLegacy.getInstance().getDescription().getAuthors()
+                        "&eMade by: &c" + MiniAnnouncerLegacy.getInstance().getDescription().getAuthors()
                 );
                 break;
             default:
                 ChatUtil.toArraySender(
                         sender,
-                        "&6MiniAnnouncer &8- &cv" + MiniMessageLegacy.getInstance().getDescription().getVersion(),
+                        "&6MiniAnnouncer &8- &cv" + MiniAnnouncerLegacy.getInstance().getDescription().getVersion(),
                         "&r",
-                        "&eMade by: &c" + MiniMessageLegacy.getInstance().getDescription().getAuthors(),
+                        "&eMade by: &c" + MiniAnnouncerLegacy.getInstance().getDescription().getAuthors(),
                         "&e/ma - /minia - /announcer - /miniannouncer",
                         "&r",
                         "&a/ma reload &8| &eReload plugin",

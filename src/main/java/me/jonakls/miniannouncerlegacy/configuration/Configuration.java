@@ -1,4 +1,4 @@
-package me.jonakls.minimessagelegacy.configuration;
+package me.jonakls.miniannouncerlegacy.configuration;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;

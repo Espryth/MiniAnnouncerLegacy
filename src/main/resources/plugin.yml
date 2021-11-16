@@ -1,6 +1,6 @@
-name: MiniMessageLegacy
+name: MiniAnnouncerLegacy
 version: '${project.version}'
-main: me.jonakls.minimessagelegacy.MiniMessageLegacy
+main: me.jonakls.miniannouncerlegacy.MiniAnnouncerLegacy
 authors: [ Jonakls ]
 description: Simple automatic announcer with MiniMessage!
 softdepend:

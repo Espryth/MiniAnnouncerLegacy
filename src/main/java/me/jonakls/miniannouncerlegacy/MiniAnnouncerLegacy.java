@@ -1,18 +1,18 @@
-package me.jonakls.minimessagelegacy;
+package me.jonakls.miniannouncerlegacy;
 
-import me.jonakls.minimessagelegacy.commands.MainCommand;
-import me.jonakls.minimessagelegacy.managers.ActionsManager;
-import me.jonakls.minimessagelegacy.managers.AnnouncerManager;
-import me.jonakls.minimessagelegacy.module.BinderModule;
+import me.jonakls.miniannouncerlegacy.commands.MainCommand;
+import me.jonakls.miniannouncerlegacy.managers.ActionsManager;
+import me.jonakls.miniannouncerlegacy.managers.AnnouncerManager;
+import me.jonakls.miniannouncerlegacy.module.BinderModule;
 import me.yushust.inject.Injector;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.inject.Inject;
 
-public final class MiniMessageLegacy extends JavaPlugin {
+public final class MiniAnnouncerLegacy extends JavaPlugin {
 
-    private static MiniMessageLegacy instance;
+    private static MiniAnnouncerLegacy instance;
     private BukkitAudiences adventure;
 
     @Inject
@@ -53,7 +53,7 @@ public final class MiniMessageLegacy extends JavaPlugin {
         injector.injectMembers(this);
     }
 
-    public static MiniMessageLegacy getInstance() {
+    public static MiniAnnouncerLegacy getInstance() {
         return instance;
     }
 

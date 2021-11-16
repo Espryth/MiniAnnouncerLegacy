@@ -1,8 +1,8 @@
-package me.jonakls.minimessagelegacy.managers;
+package me.jonakls.miniannouncerlegacy.managers;
 
-import me.jonakls.minimessagelegacy.MiniMessageLegacy;
-import me.jonakls.minimessagelegacy.configuration.Configuration;
-import me.jonakls.minimessagelegacy.utils.PlaceholderUtil;
+import me.jonakls.miniannouncerlegacy.MiniAnnouncerLegacy;
+import me.jonakls.miniannouncerlegacy.configuration.Configuration;
+import me.jonakls.miniannouncerlegacy.utils.PlaceholderUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -21,7 +21,7 @@ public class AnnouncerManager {
     private BukkitTask task;
 
     public void announce() {
-        ActionsManager actions = MiniMessageLegacy.getInstance().getActionsManager();
+        ActionsManager actions = MiniAnnouncerLegacy.getInstance().getActionsManager();
         Random random = new Random();
 
         // If announcer is disabled from config, announcer will not be sent.
@@ -53,7 +53,7 @@ public class AnnouncerManager {
 
     public void initTask() {
         this.task = Bukkit.getScheduler().runTaskTimerAsynchronously(
-                MiniMessageLegacy.getInstance(),
+                MiniAnnouncerLegacy.getInstance(),
                 this::announce,
                 0L,
                 20L * config.getInt("announcer.interval")

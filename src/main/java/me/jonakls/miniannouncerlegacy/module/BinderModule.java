@@ -1,14 +1,14 @@
-package me.jonakls.minimessagelegacy.module;
+package me.jonakls.miniannouncerlegacy.module;
 
-import me.jonakls.minimessagelegacy.MiniMessageLegacy;
-import me.jonakls.minimessagelegacy.configuration.Configuration;
+import me.jonakls.miniannouncerlegacy.MiniAnnouncerLegacy;
+import me.jonakls.miniannouncerlegacy.configuration.Configuration;
 import me.yushust.inject.AbstractModule;
 
 public class BinderModule extends AbstractModule {
 
-    private MiniMessageLegacy plugin;
+    private MiniAnnouncerLegacy plugin;
 
-    public BinderModule(MiniMessageLegacy plugin) {
+    public BinderModule(MiniAnnouncerLegacy plugin) {
         this.plugin = plugin;
     }
 
