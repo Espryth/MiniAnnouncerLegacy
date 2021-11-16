@@ -1,0 +1,14 @@
+name: MiniMessageLegacy
+version: '${project.version}'
+main: me.jonakls.minimessagelegacy.MiniMessageLegacy
+authors: [ Jonakls ]
+description: Simple automatic announcer with MiniMessage!
+softdepend:
+  - PlaceholderAPI
+commands:
+  miniannouncer:
+    description: General command of plugin
+    aliases:
+      - ma
+      - minia
+      - announcer
