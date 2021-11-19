@@ -2,7 +2,7 @@ package me.jonakls.miniannouncerlegacy.builders;
 
 import me.jonakls.api.ActionBar;
 
-public class ActionBarBuilder implements ActionBar {
+public class ActionBarBuilder {
 
     private String text;
 
@@ -12,11 +12,7 @@ public class ActionBarBuilder implements ActionBar {
     }
 
     public ActionBar build() {
-        return this;
+        return new ActionBar(text);
     }
 
-    @Override
-    public String getActionBar() {
-        return text;
-    }
 }

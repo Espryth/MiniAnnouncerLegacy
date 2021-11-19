@@ -2,7 +2,7 @@ package me.jonakls.miniannouncerlegacy.builders;
 
 import me.jonakls.api.Title;
 
-public class TitleBuilder implements Title {
+public class TitleBuilder {
 
     private String title;
     private String subTitle;
@@ -36,31 +36,8 @@ public class TitleBuilder implements Title {
     }
 
     public Title build() {
-        return this;
-    }
-
-    @Override
-    public String getTitle() {
-        return title;
-    }
-
-    @Override
-    public String getSubTitle() {
-        return subTitle;
-    }
-
-    @Override
-    public int getFadeIn() {
-        return fadeIn;
-    }
-
-    @Override
-    public int getStay() {
-        return stay;
-    }
-
-    @Override
-    public int getFadeOut() {
-        return fadeOut;
+        return new Title(
+          title, subTitle, fadeIn, stay, fadeOut
+        );
     }
 }

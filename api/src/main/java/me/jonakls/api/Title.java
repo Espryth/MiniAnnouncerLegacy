@@ -1,11 +1,41 @@
 package me.jonakls.api;
 
-public interface Title {
+public final class Title {
 
-    String getTitle();
-    String getSubTitle();
-    int getFadeIn();
-    int getStay();
-    int getFadeOut();
+  private final String title;
+  private final String subTitle;
+  private final int fadeIn;
+  private final int stay;
+  private final int fadeOut;
 
+  public Title(
+    String title, String subTitle,
+    int fadeIn, int stay, int fadeOut
+  ) {
+    this.title = title;
+    this.subTitle = subTitle;
+    this.fadeIn = fadeIn;
+    this.stay = stay;
+    this.fadeOut = fadeOut;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public String getSubTitle() {
+    return subTitle;
+  }
+
+  public int getFadeIn() {
+    return fadeIn;
+  }
+
+  public int getStay() {
+    return stay;
+  }
+
+  public int getFadeOut() {
+    return fadeOut;
+  }
 }

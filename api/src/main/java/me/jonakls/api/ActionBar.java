@@ -1,7 +1,14 @@
 package me.jonakls.api;
 
-public interface ActionBar {
+public final class ActionBar {
 
-    String getActionBar();
+    private final String actionBar;
 
+    public ActionBar(String actionBar) {
+        this.actionBar = actionBar;
+    }
+
+    public String getActionBar() {
+        return actionBar;
+    }
 }
