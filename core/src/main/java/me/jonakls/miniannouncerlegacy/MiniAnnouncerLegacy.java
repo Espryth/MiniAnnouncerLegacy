@@ -1,11 +1,12 @@
 package me.jonakls.miniannouncerlegacy;
 
+import me.jonakls.api.NMS;
+import me.jonakls.miniannouncerlegacy.api.ServerVersion;
 import me.jonakls.miniannouncerlegacy.commands.MainCommand;
 import me.jonakls.miniannouncerlegacy.managers.ActionsManager;
 import me.jonakls.miniannouncerlegacy.managers.AnnouncerManager;
 import me.jonakls.miniannouncerlegacy.module.BinderModule;
 import me.yushust.inject.Injector;
-import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.inject.Inject;
@@ -13,7 +14,7 @@ import javax.inject.Inject;
 public final class MiniAnnouncerLegacy extends JavaPlugin {
 
     private static MiniAnnouncerLegacy instance;
-    private BukkitAudiences adventure;
+    private NMS component;
 
     @Inject
     private ActionsManager actionsManager;
@@ -25,14 +26,12 @@ public final class MiniAnnouncerLegacy extends JavaPlugin {
     private MainCommand mainCommand;
 
     @Override
-    public void onLoad() {
+    public void onEnable() {
         instance = this;
 
-    }
+        ServerVersion version = new ServerVersion();
+        component = version.version();
 
-    @Override
-    public void onEnable() {
-        adventure = BukkitAudiences.create(this);
         setupInjector();
         getCommand("miniannouncer").setExecutor(mainCommand);
         announcerManager.initTask();
@@ -42,10 +41,6 @@ public final class MiniAnnouncerLegacy extends JavaPlugin {
     @Override
     public void onDisable() {
         announcerManager.stopTask();
-        if (adventure != null) {
-            adventure.close();
-            adventure = null;
-        }
     }
 
     private void setupInjector() {
@@ -57,15 +52,15 @@ public final class MiniAnnouncerLegacy extends JavaPlugin {
         return instance;
     }
 
-    public BukkitAudiences getAdventure() {
-        return adventure;
-    }
-
     public ActionsManager getActionsManager() {
         return actionsManager;
     }
 
     public AnnouncerManager getAnnouncerManager() {
         return announcerManager;
+    }
+
+    public NMS getComponent() {
+        return component;
     }
 }
