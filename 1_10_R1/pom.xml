@@ -2,21 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>MiniAnnouncerLegacy</artifactId>
+        <groupId>me.jonakls</groupId>
+        <version>0.1</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.jonakls</groupId>
-    <artifactId>MiniAnnouncerLegacy</artifactId>
-    <version>0.1</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>core</module>
-        <module>api</module>
-        <module>1_8_R3</module>
-        <module>1_9_R1</module>
-        <module>1_10_R1</module>
-        <module>1_17_R1</module>
-    </modules>
+    <artifactId>1_10_R1</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
