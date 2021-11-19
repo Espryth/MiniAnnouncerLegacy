@@ -1,0 +1,36 @@
+announcer:
+  enabled: true
+  random: false
+  interval: 30
+interval-announcement:
+  - one
+  - two
+  - three
+announcements:
+  one:
+    - "[MESSAGE] &r"
+    - "[TITLE]&aTitle announce;&aSubtitle Announce;5;5;5"
+    - "[ACTIONBAR]&bThis is an actionbar announcer"
+    - "[MESSAGE]&cThis is a text announcer"
+    - "[MESSAGE]&bCompatible with hex colors and gradient effect"
+    - "[MESSAGE]&aPlease view <click:open_url:'https1//github.com/Jonakls':&aTest> <hover:show_text:&eClick here:&aPrueva>"
+    - "[MESSAGE] &r"
+    - "[SOUND] ORB_PICKUP ;5;5"
+  two:
+    - "[MESSAGE] &r"
+    - "[TITLE]&aTitle announce;&aSubtitle Announce;5;5;5"
+    - "[ACTIONBAR]&bThis is an actionbar announcer"
+    - "[MESSAGE]&cThis is a text announcer"
+    - "[MESSAGE]&bCompatible with hex colors and gradient effect"
+    - "[MESSAGE]&aPlease view <click:open_url:https://github.com/Jonakls:&aTest> <hover:show_text:&eClick here:&aPrueva>"
+    - "[MESSAGE] &r"
+    - "[SOUND] ORB_PICKUP ;5;5"
+  three:
+    - "[MESSAGE] &r"
+    - "[TITLE]&aTitle announce;&aSubtitle Announce;5;5;5"
+    - "[ACTIONBAR]&bThis is an actionbar announcer"
+    - "[MESSAGE]&cThis is a text announcer"
+    - "[MESSAGE]&bCompatible with hex colors and gradient effect"
+    - "[MESSAGE]&aPlease view <click:open_url:https://github.com/Jonakls:&aTest> <hover:show_text:&eClick here:&aPrueva>"
+    - "[MESSAGE] &r"
+    - "[SOUND] ORB_PICKUP ;5;5"
